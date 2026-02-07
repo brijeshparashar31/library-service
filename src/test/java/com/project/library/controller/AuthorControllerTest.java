@@ -26,7 +26,7 @@ class AuthorControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-
+    // Listing all books requested for an Author with Id = 2
     @Test
     public void whenAuthorRequested_thenReturnAuthorWithAllListOfBooks() throws Exception {
         HttpEntity request = new HttpEntity(getHeaders());
@@ -41,7 +41,7 @@ class AuthorControllerTest {
         var bookListFetchedFromDB = response.getBody().getBooks().stream().map(Book::getTitle).toList();
         assertTrue(bookListFetchedFromDB.containsAll(bookList));
     }
-
+    // Returns error when information of Author that doesn't exist in DB is requested.
     @Test
     public void whenInvalidAuthorRequested_thenReturnErrorMessage() throws Exception {
         HttpEntity request = new HttpEntity(getHeaders());
