@@ -4,13 +4,12 @@ import com.project.library.entity.AuthorEntity;
 import com.project.library.entity.BookEntity;
 import com.project.library.model.Author;
 import com.project.library.model.Book;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Mapper class

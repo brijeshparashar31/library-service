@@ -26,9 +26,4 @@ public class BookService {
         }
         return mapper.mapBookEntityToBookWithAuthor(bookEntity.orElse(null));
     }
-
-    public void createBook(Book book) {
-        BookEntity bookEntity = mapper.mapBookToBookEntity(book);
-        bookRepository.save(bookEntity);
-    }
 }
